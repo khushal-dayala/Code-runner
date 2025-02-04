@@ -1,0 +1,270 @@
+/* Global styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7fc;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #2C3E50;
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+    color: white !important;
+}
+
+/* Sidebar */
+.sidebar {
+    height: 100vh;
+    background-color: #2C3E50;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    padding-top: 20px;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #ecf0f1;
+    font-size: 16px;
+    margin: 8px 0;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar a:hover {
+    background-color: #34495E;
+    cursor: pointer;
+}
+
+.sidebar h4 {
+    text-align: center;
+    font-size: 24px;
+    color: #ecf0f1;
+}
+
+/* Main content area */
+.main-content {
+    margin-left: 260px;
+    padding: 40px;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 28px;
+    font-weight: 500;
+    color: #2C3E50;
+}
+
+.header button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.header button:hover {
+    background-color: #2980b9;
+}
+
+/* Code Editor */
+.code-editor {
+    width: 100%;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #ecf0f1;
+    font-family: 'Courier New', monospace;
+}
+
+/* Output Section */
+.output {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 150px;
+    background-color: #e9f0f5;
+    animation: slideIn 0.5s ease-out;
+}
+
+/* Sidebar with Background Image */
+/* .sidebar {
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('your-background-image.jpg') no-repeat center center;
+    background-size: cover;
+    position: fixed;
+    top: 65px;
+    left: 0;
+    width: 250px;
+    padding: 20px;
+    color: white;
+    overflow-y: auto;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #ecf0f1;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.sidebar a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #ecf0f1;
+    font-size: 14px;
+    margin: 8px 0;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sidebar a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateX(5px);
+    color: #ffffff;
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+} */
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: #2C3E50;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* Category Header Button */
+.category-header {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.category-header:hover {
+    background-color: #2980b9;
+}
+
+/* Dropdown Container */
+.category-container {
+    margin-top: 20px;
+}
+
+/* Dropdown Container */
+.category-dropdown {
+    display: none;
+    margin-top: 5px;
+    background-color: #4d6f91;
+    border-radius: 6px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    max-height: 200px;
+    /* Set a max height */
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+    transition: opacity 0.3s ease, max-height 0.5s ease-in-out;
+}
+
+/* Show dropdown on active */
+.category-dropdown.open {
+    display: block;
+    opacity: 1;
+    max-height: 300px;
+    /* Ensure the dropdown has the same max height when open */
+}
+
+
+/* Code Snippet Links */
+.code-snippet {
+    display: block;
+    padding: 8px;
+    color: #2c3e50;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.code-snippet:hover {
+    background-color: #3498db;
+    color: white;
+}
+
+
+.CodeMirror {
+    border-radius: 30px !important;
+}
+
+.output {
+    height: 280px !important;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
