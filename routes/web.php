@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Admin\CodeController;
+use App\Http\Controllers\Admin\CategoryController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -29,15 +31,15 @@ Route::middleware('auth')->group(function () {
 // Route::post('/execute', [HomeController::class, 'execute'])->name('php-execute');
 
 // // Admin side routes    
-// Route::get('/admin1', function () {
-//     return view('admin.index');
-// });
-// Route::resource('/codes', CodeController::class);
-// Route::get('codes/{id}/delete', [CodeController::class, 'destroy'])->name('codes.delete');
+Route::get('/admin1', function () {
+    return view('admin.index');
+});
+Route::resource('/codes', CodeController::class);
+Route::get('codes/{id}/delete', [CodeController::class, 'destroy'])->name('codes.delete');
 
-// Route::resource('/categories', CategoryController::class);
-// Route::get('codes/{id}/delete', [CategoryController::class, 'destroy'])->name('codes.delete');
+Route::resource('/categories', CategoryController::class);
+Route::get('codes/{id}/delete', [CategoryController::class, 'destroy'])->name('codes.delete');
 
-// Route::get('/category-suggestions', [CategoryController::class, 'suggestions'])->name('category.suggestions');
+Route::get('/category-suggestions', [CategoryController::class, 'suggestions'])->name('category.suggestions');
 
 require __DIR__.'/auth.php';

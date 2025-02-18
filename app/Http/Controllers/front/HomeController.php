@@ -9,11 +9,10 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index()
+    public function categories()
     {
         $categories = Category::with('code_listing')->latest()->get();
-        // return $categories;
-        return view('front.index', compact('categories'));
+        return json_encode($categories);
     }
     
     public function execute(Request $request)
